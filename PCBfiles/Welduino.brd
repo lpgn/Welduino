@@ -160,7 +160,6 @@
 <board>
 <plain>
 <text x="1.809459375" y="28.707753125" size="1.55" layer="1" font="vector" rot="R90">POWER</text>
-<text x="80.567175" y="27.784740625" size="1.55" layer="1" font="vector">grbl</text>
 <wire x1="-1.04" y1="60.47" x2="-1.04" y2="-1.2" width="1" layer="46"/>
 <wire x1="-1.04" y1="-1.2" x2="98.9" y2="-1.2" width="1" layer="46"/>
 <wire x1="98.9" y1="-1.2" x2="98.9" y2="59.6" width="1" layer="46"/>
@@ -14938,6 +14937,40 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </package>
 </packages>
 </library>
+<library name="pot" urn="urn:adsk.eagle:library:331">
+<description>&lt;b&gt;Potentiometers&lt;/b&gt;&lt;p&gt;
+Beckman, Copal, Piher, Spectrol, Schukat&lt;p&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="3223J" urn="urn:adsk.eagle:footprint:22669/1" library_version="2">
+<description>&lt;b&gt;3 mm SMD Trimming Potentiometer&lt;/b&gt; Side Adjust&lt;p&gt;
+Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
+<wire x1="-1.85" y1="1.85" x2="1.85" y2="1.85" width="0.2032" layer="51"/>
+<wire x1="1.85" y1="1.85" x2="1.85" y2="-1.85" width="0.2032" layer="51"/>
+<wire x1="1.85" y1="-1.85" x2="-1.85" y2="-1.85" width="0.2032" layer="51"/>
+<wire x1="-1.85" y1="-1.85" x2="-1.85" y2="1.85" width="0.2032" layer="51"/>
+<wire x1="-0.8975" y1="1.85" x2="1.85" y2="1.85" width="0.2032" layer="21"/>
+<wire x1="1.85" y1="1.85" x2="1.85" y2="1.0075" width="0.2032" layer="21"/>
+<wire x1="1.85" y1="-1.85" x2="-0.8975" y2="-1.85" width="0.2032" layer="21"/>
+<wire x1="1.85" y1="-1.0075" x2="1.85" y2="-1.85" width="0.2032" layer="21"/>
+<wire x1="-1.85" y1="-0.58" x2="-1.85" y2="0.58" width="0.2032" layer="21"/>
+<smd name="1" x="-2" y="1.4" dx="1.6" dy="0.9" layer="1"/>
+<smd name="2" x="2" y="0" dx="1.6" dy="1.3" layer="1"/>
+<smd name="3" x="-2" y="-1.4" dx="1.6" dy="0.9" layer="1"/>
+<text x="-1.5875" y="2.2225" size="1.27" layer="25">&gt;NAME</text>
+<text x="-1.905" y="-3.4925" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+</packages>
+<packages3d>
+<package3d name="3223J" urn="urn:adsk.eagle:package:22724/1" type="box" library_version="2">
+<description>3 mm SMD Trimming Potentiometer Side Adjust
+Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
+<packageinstances>
+<packageinstance name="3223J"/>
+</packageinstances>
+</package3d>
+</packages3d>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -15312,6 +15345,11 @@ design rules under a new name.</description>
 <element name="LCD1" library="lcd_2x16_led_backlight" package="HY-1602F" value="LCD_2X16_SIL" x="4.9028" y="-6.4788" smashed="yes">
 <attribute name="NAME" x="-0.5572" y="-3.6788" size="1.27" layer="25"/>
 </element>
+<element name="R3" library="pot" library_urn="urn:adsk.eagle:library:331" package="3223J" package3d_urn="urn:adsk.eagle:package:22724/1" value="" x="5.8601625" y="5.346865625" smashed="yes">
+<attribute name="NAME" x="4.2726625" y="7.569365625" size="1.27" layer="25"/>
+<attribute name="POPULARITY" value="0" x="5.8601625" y="5.346865625" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="3.9551625" y="1.854365625" size="1.27" layer="27"/>
+</element>
 </elements>
 <signals>
 <signal name="5V">
@@ -15331,11 +15369,16 @@ design rules under a new name.</description>
 <contactref element="X6" pad="1"/>
 <contactref element="LCD1" pad="2"/>
 <contactref element="LCD1" pad="15"/>
+<contactref element="R3" pad="1"/>
+<contactref element="X5" pad="1"/>
 <wire x1="18.6578875" y1="37.88495" x2="27.72918125" y2="70.631015625" width="0" layer="19" extent="1-1"/>
 <wire x1="18.7098625" y1="33.790884375" x2="18.6578875" y2="37.88495" width="0" layer="19" extent="1-1"/>
 <wire x1="7.231740625" y1="34.696978125" x2="18.7098625" y2="33.790884375" width="0" layer="19" extent="1-1"/>
 <wire x1="14.0636625" y1="14.107125" x2="18.7098625" y2="33.790884375" width="0" layer="19" extent="1-1"/>
-<wire x1="34.762528125" y1="14.107125" x2="14.0636625" y2="14.107125" width="0" layer="19" extent="1-1"/>
+<wire x1="24.376128125" y1="14.107125" x2="14.0636625" y2="14.107125" width="0" layer="19" extent="1-1"/>
+<wire x1="34.762528125" y1="14.107125" x2="24.376128125" y2="14.107125" width="0" layer="19" extent="1-1"/>
+<wire x1="3.8601625" y1="6.746865625" x2="14.0636625" y2="14.107125" width="0" layer="19" extent="1-1"/>
+<wire x1="9.9828" y1="-6.4788" x2="3.8601625" y2="6.746865625" width="0" layer="19" extent="1-1"/>
 <wire x1="55.38645" y1="14.157890625" x2="34.762528125" y2="14.107125" width="0" layer="19" extent="1-1"/>
 <wire x1="39.6311125" y1="38.13814375" x2="18.6578875" y2="37.88495" width="0" layer="19" extent="1-1"/>
 <wire x1="39.6311125" y1="36.53814375" x2="39.6311125" y2="38.13814375" width="0" layer="19" extent="1-1"/>
@@ -15344,7 +15387,6 @@ design rules under a new name.</description>
 <wire x1="52.238625" y1="35.39949375" x2="47.9623125" y2="35.73814375" width="0" layer="19" extent="1-1"/>
 <wire x1="55.265625" y1="35.449490625" x2="52.238625" y2="35.39949375" width="0" layer="19" extent="1-1"/>
 <wire x1="57.914646875" y1="35.451415625" x2="55.265625" y2="35.449490625" width="0" layer="19" extent="1-1"/>
-<wire x1="9.9828" y1="-6.4788" x2="14.0636625" y2="14.107125" width="0" layer="19" extent="1-1"/>
 <wire x1="43.0028" y1="-6.4788" x2="34.762528125" y2="14.107125" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$2">
@@ -15377,11 +15419,11 @@ design rules under a new name.</description>
 <contactref element="C10" pad="2"/>
 <contactref element="IC1" pad="1"/>
 <contactref element="X3" pad="1"/>
-<contactref element="X5" pad="1"/>
 <contactref element="X1" pad="1"/>
 <contactref element="LCD1" pad="5"/>
 <contactref element="LCD1" pad="16"/>
 <contactref element="LCD1" pad="1"/>
+<contactref element="R3" pad="3"/>
 <wire x1="31.730709375" y1="67.029403125" x2="35.49" y2="70.21" width="0" layer="19" extent="1-1"/>
 <wire x1="27.72918125" y1="66.059015625" x2="31.730709375" y2="67.029403125" width="0" layer="19" extent="1-1"/>
 <wire x1="29.268403125" y1="62.609253125" x2="27.72918125" y2="66.059015625" width="0" layer="19" extent="1-1"/>
@@ -15394,13 +15436,13 @@ design rules under a new name.</description>
 <wire x1="28.074215625" y1="34.337440625" x2="39.6311125" y2="37.33814375" width="0" layer="19" extent="1-1"/>
 <wire x1="28.039315625" y1="30.92004375" x2="28.074215625" y2="34.337440625" width="0" layer="19" extent="1-1"/>
 <wire x1="25.0048" y1="30.9051375" x2="28.039315625" y2="30.92004375" width="0" layer="19" extent="1-1"/>
-<wire x1="24.376128125" y1="14.107125" x2="25.0048" y2="30.9051375" width="0" layer="19" extent="1-1"/>
 <wire x1="7.231740625" y1="29.696978125" x2="25.0048" y2="30.9051375" width="0" layer="19" extent="1-1"/>
-<wire x1="45.074490625" y1="14.157890625" x2="24.376128125" y2="14.107125" width="0" layer="19" extent="1-1"/>
+<wire x1="45.074490625" y1="14.157890625" x2="39.6311125" y2="37.33814375" width="0" layer="19" extent="1-1"/>
 <wire x1="65.700125" y1="14.1579125" x2="45.074490625" y2="14.157890625" width="0" layer="19" extent="1-1"/>
 <wire x1="45.5428" y1="-6.4788" x2="45.074490625" y2="14.157890625" width="0" layer="19" extent="1-1"/>
-<wire x1="17.6028" y1="-6.4788" x2="24.376128125" y2="14.107125" width="0" layer="19" extent="1-1"/>
-<wire x1="7.4428" y1="-6.4788" x2="17.6028" y2="-6.4788" width="0" layer="19" extent="1-1"/>
+<wire x1="3.8601625" y1="3.946865625" x2="7.231740625" y2="29.696978125" width="0" layer="19" extent="1-1"/>
+<wire x1="7.4428" y1="-6.4788" x2="3.8601625" y2="3.946865625" width="0" layer="19" extent="1-1"/>
+<wire x1="17.6028" y1="-6.4788" x2="7.4428" y2="-6.4788" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$26">
 <contactref element="LED_GREEN" pad="2"/>
@@ -15442,16 +15484,12 @@ design rules under a new name.</description>
 </signal>
 <signal name="PIN_GAS_ON_3">
 <contactref element="328-1" pad="1"/>
-<contactref element="X6" pad="2"/>
-<wire x1="19.0636625" y1="14.107125" x2="39.3771125" y2="40.53814375" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="PIN_THERMAL_SAFETY_13">
 <contactref element="328-1" pad="17"/>
 </signal>
 <signal name="PIN_CURRENT_ON_12">
 <contactref element="328-1" pad="16"/>
-<contactref element="X5" pad="2"/>
-<wire x1="29.376128125" y1="14.107125" x2="46.5967125" y2="33.31854375" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="PIN_CURRENT_READ_A2">
 <contactref element="328-1" pad="25"/>
@@ -15549,6 +15587,8 @@ design rules under a new name.</description>
 </signal>
 <signal name="10K_POTENTIOMETER">
 <contactref element="LCD1" pad="3"/>
+<contactref element="R3" pad="2"/>
+<wire x1="12.5228" y1="-6.4788" x2="7.8601625" y2="5.346865625" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$22">
 <contactref element="LCD1" pad="7"/>
@@ -15561,6 +15601,12 @@ design rules under a new name.</description>
 </signal>
 <signal name="N$25">
 <contactref element="LCD1" pad="10"/>
+</signal>
+<signal name="RELAY_PIN_GAS_ON_3">
+<contactref element="X6" pad="2"/>
+</signal>
+<signal name="RELAY_PIN_CURRENT_ON_12">
+<contactref element="X5" pad="2"/>
 </signal>
 </signals>
 <mfgpreviewcolors>
