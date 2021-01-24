@@ -1662,6 +1662,108 @@ Variants with postfix FAB are widened to allow the routing of internal traces</d
 </deviceset>
 </devicesets>
 </library>
+<library name="lcd_2x16_led_backlight">
+<description>HY-1602F: HD44780-based 2x16 LCD display with LED backlight produced by Shen Zhen AV-Display</description>
+<packages>
+<package name="HY-1602F">
+<wire x1="-5.46" y1="2.5" x2="74.54" y2="2.5" width="0.127" layer="21"/>
+<wire x1="74.54" y1="2.5" x2="74.54" y2="-33.5" width="0.127" layer="21"/>
+<wire x1="74.54" y1="-33.5" x2="-5.46" y2="-33.5" width="0.127" layer="27"/>
+<wire x1="-5.46" y1="-33.5" x2="-5.46" y2="2.5" width="0.127" layer="21"/>
+<wire x1="-0.46" y1="-3" x2="69.54" y2="-3" width="0.127" layer="21"/>
+<wire x1="69.54" y1="-3" x2="69.54" y2="-28" width="0.127" layer="21"/>
+<wire x1="-0.46" y1="-3" x2="-0.46" y2="-28" width="0.127" layer="21"/>
+<wire x1="-0.46" y1="-28" x2="69.54" y2="-28" width="0.127" layer="21"/>
+<circle x="-2.96" y="0" radius="3.5693" width="0.127" layer="49"/>
+<circle x="72.04" y="0" radius="3.5735" width="0.127" layer="49"/>
+<circle x="72.04" y="-31" radius="3.5735" width="0.127" layer="49"/>
+<circle x="-2.96" y="-31" radius="3.5693" width="0.127" layer="49"/>
+<pad name="1" x="2.54" y="0" drill="1" diameter="1.9304" shape="long" rot="R90"/>
+<pad name="2" x="5.08" y="0" drill="1" diameter="1.9304" shape="long" rot="R90"/>
+<pad name="3" x="7.62" y="0" drill="1" diameter="1.9304" shape="long" rot="R90"/>
+<pad name="4" x="10.16" y="0" drill="1" diameter="1.9304" shape="long" rot="R90"/>
+<pad name="5" x="12.7" y="0" drill="1" diameter="1.9304" shape="long" rot="R90"/>
+<pad name="6" x="15.24" y="0" drill="1" diameter="1.9304" shape="long" rot="R90"/>
+<pad name="7" x="17.78" y="0" drill="1" diameter="1.9304" shape="long" rot="R90"/>
+<pad name="8" x="20.32" y="0" drill="1" diameter="1.9304" shape="long" rot="R90"/>
+<pad name="9" x="22.86" y="0" drill="1" diameter="1.9304" shape="long" rot="R90"/>
+<pad name="10" x="25.4" y="0" drill="1" diameter="1.9304" shape="long" rot="R90"/>
+<pad name="11" x="27.94" y="0" drill="1" diameter="1.9304" shape="long" rot="R90"/>
+<pad name="12" x="30.48" y="0" drill="1" diameter="1.9304" shape="long" rot="R90"/>
+<pad name="13" x="33.02" y="0" drill="1" diameter="1.9304" shape="long" rot="R90"/>
+<pad name="14" x="35.56" y="0" drill="1" diameter="1.9304" shape="long" rot="R90"/>
+<pad name="15" x="38.1" y="0" drill="1" diameter="1.9304" shape="long" rot="R90"/>
+<pad name="16" x="40.64" y="0" drill="1" diameter="1.9304" shape="long" rot="R90"/>
+<text x="-5.46" y="2.8" size="1.27" layer="25">&gt;NAME</text>
+<hole x="-2.96" y="0" drill="2.5"/>
+<hole x="72.04" y="0" drill="2.5"/>
+<hole x="-2.96" y="-31" drill="2.5"/>
+<hole x="72.04" y="-31" drill="2.5"/>
+</package>
+</packages>
+<symbols>
+<symbol name="LCD_SIL">
+<wire x1="-7.62" y1="2.54" x2="-7.62" y2="-40.64" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-40.64" x2="10.16" y2="-40.64" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-40.64" x2="10.16" y2="2.54" width="0.254" layer="94"/>
+<wire x1="10.16" y1="2.54" x2="-7.62" y2="2.54" width="0.254" layer="94"/>
+<wire x1="2.54" y1="0" x2="7.62" y2="0" width="0.254" layer="94"/>
+<wire x1="7.62" y1="0" x2="7.62" y2="-38.1" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-38.1" x2="2.54" y2="-38.1" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-38.1" x2="2.54" y2="0" width="0.254" layer="94"/>
+<text x="5.08" y="-30.48" size="1.27" layer="94" rot="R90">LCD 2x16 (LED backlight)</text>
+<text x="-7.62" y="-43.18" size="1.27" layer="95">&gt;NAME</text>
+<pin name="VSS" x="-12.7" y="0" length="middle" direction="pwr"/>
+<pin name="VCC" x="-12.7" y="-2.54" length="middle" direction="pwr"/>
+<pin name="VO" x="-12.7" y="-5.08" length="middle" direction="in"/>
+<pin name="RS" x="-12.7" y="-7.62" length="middle" direction="in"/>
+<pin name="R/W" x="-12.7" y="-10.16" length="middle" direction="in"/>
+<pin name="E" x="-12.7" y="-12.7" length="middle" direction="in"/>
+<pin name="DB0" x="-12.7" y="-15.24" length="middle"/>
+<pin name="DB1" x="-12.7" y="-17.78" length="middle"/>
+<pin name="DB2" x="-12.7" y="-20.32" length="middle"/>
+<pin name="DB3" x="-12.7" y="-22.86" length="middle"/>
+<pin name="DB4" x="-12.7" y="-25.4" length="middle"/>
+<pin name="DB5" x="-12.7" y="-27.94" length="middle"/>
+<pin name="DB6" x="-12.7" y="-30.48" length="middle"/>
+<pin name="DB7" x="-12.7" y="-33.02" length="middle"/>
+<pin name="LEDA" x="-12.7" y="-35.56" length="middle" direction="pas"/>
+<pin name="LEDK" x="-12.7" y="-38.1" length="middle" direction="pas"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="LCD_2X16_SIL" prefix="LCD">
+<gates>
+<gate name="G$1" symbol="LCD_SIL" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="HY-1602F">
+<connects>
+<connect gate="G$1" pin="DB0" pad="7"/>
+<connect gate="G$1" pin="DB1" pad="8"/>
+<connect gate="G$1" pin="DB2" pad="9"/>
+<connect gate="G$1" pin="DB3" pad="10"/>
+<connect gate="G$1" pin="DB4" pad="11"/>
+<connect gate="G$1" pin="DB5" pad="12"/>
+<connect gate="G$1" pin="DB6" pad="13"/>
+<connect gate="G$1" pin="DB7" pad="14"/>
+<connect gate="G$1" pin="E" pad="6"/>
+<connect gate="G$1" pin="LEDA" pad="15"/>
+<connect gate="G$1" pin="LEDK" pad="16"/>
+<connect gate="G$1" pin="R/W" pad="5"/>
+<connect gate="G$1" pin="RS" pad="4"/>
+<connect gate="G$1" pin="VCC" pad="2"/>
+<connect gate="G$1" pin="VO" pad="3"/>
+<connect gate="G$1" pin="VSS" pad="1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -1698,6 +1800,7 @@ Variants with postfix FAB are widened to allow the routing of internal traces</d
 <part name="X5" library="con-wago-500" library_urn="urn:adsk.eagle:library:195" deviceset="W237-102" device="" package3d_urn="urn:adsk.eagle:package:10688/1"/>
 <part name="X6" library="con-wago-500" library_urn="urn:adsk.eagle:library:195" deviceset="W237-102" device="" package3d_urn="urn:adsk.eagle:package:10688/1"/>
 <part name="X7" library="con-wago-500" library_urn="urn:adsk.eagle:library:195" deviceset="W237-102" device="" package3d_urn="urn:adsk.eagle:package:10688/1"/>
+<part name="LCD1" library="lcd_2x16_led_backlight" deviceset="LCD_2X16_SIL" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1708,6 +1811,7 @@ Variants with postfix FAB are widened to allow the routing of internal traces</d
 <text x="123.19" y="109.22" size="1.778" layer="91">Conectors</text>
 <text x="-19.05" y="109.22" size="1.778" layer="91">ATMEGA328P-AU</text>
 <text x="158.75" y="57.15" size="1.778" layer="91">B7</text>
+<text x="-83.82" y="109.22" size="1.778" layer="91">LCD</text>
 </plain>
 <instances>
 <instance part="328-1" gate="1" x="40.64" y="50.8" smashed="yes">
@@ -1844,6 +1948,9 @@ Variants with postfix FAB are widened to allow the routing of internal traces</d
 <attribute name="VALUE" x="190.5" y="55.753" size="1.778" layer="96" rot="R180"/>
 <attribute name="NAME" x="187.96" y="51.181" size="1.778" layer="95"/>
 </instance>
+<instance part="LCD1" gate="G$1" x="-43.18" y="82.55" smashed="yes">
+<attribute name="NAME" x="-50.8" y="39.37" size="1.27" layer="95"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -1918,6 +2025,16 @@ Variants with postfix FAB are widened to allow the routing of internal traces</d
 <pinref part="X6" gate="-1" pin="KL"/>
 <wire x1="182.88" y1="16.51" x2="162.56" y2="16.51" width="0.1524" layer="91"/>
 <label x="162.56" y="16.51" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="LCD1" gate="G$1" pin="VCC"/>
+<wire x1="-55.88" y1="80.01" x2="-66.04" y2="80.01" width="0.1524" layer="91"/>
+<label x="-67.31" y="80.01" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="LCD1" gate="G$1" pin="LEDA"/>
+<wire x1="-55.88" y1="46.99" x2="-66.04" y2="46.99" width="0.1524" layer="91"/>
+<label x="-67.31" y="46.99" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -2026,6 +2143,21 @@ Variants with postfix FAB are widened to allow the routing of internal traces</d
 <pinref part="X1" gate="-1" pin="KL"/>
 <wire x1="182.88" y1="87.63" x2="162.56" y2="87.63" width="0.1524" layer="91"/>
 <label x="162.56" y="87.63" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="LCD1" gate="G$1" pin="R/W"/>
+<wire x1="-55.88" y1="72.39" x2="-66.04" y2="72.39" width="0.1524" layer="91"/>
+<label x="-67.31" y="72.39" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="LCD1" gate="G$1" pin="LEDK"/>
+<wire x1="-55.88" y1="44.45" x2="-66.04" y2="44.45" width="0.1524" layer="91"/>
+<label x="-67.31" y="44.45" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="LCD1" gate="G$1" pin="VSS"/>
+<wire x1="-55.88" y1="82.55" x2="-66.04" y2="82.55" width="0.1524" layer="91"/>
+<label x="-67.31" y="82.55" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$26" class="0">
@@ -2293,6 +2425,11 @@ Variants with postfix FAB are widened to allow the routing of internal traces</d
 <wire x1="71.12" y1="50.8" x2="87.63" y2="50.8" width="0.1524" layer="91"/>
 <label x="87.63" y="50.8" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="LCD1" gate="G$1" pin="RS"/>
+<wire x1="-55.88" y1="74.93" x2="-66.04" y2="74.93" width="0.1524" layer="91"/>
+<label x="-67.31" y="74.93" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="LCD_4" class="0">
 <segment>
@@ -2301,6 +2438,11 @@ Variants with postfix FAB are widened to allow the routing of internal traces</d
 <wire x1="82.55" y1="45.72" x2="82.55" y2="43.18" width="0.1524" layer="91"/>
 <wire x1="82.55" y1="43.18" x2="90.17" y2="43.18" width="0.1524" layer="91"/>
 <label x="87.63" y="43.18" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="LCD1" gate="G$1" pin="E"/>
+<wire x1="-55.88" y1="69.85" x2="-66.04" y2="69.85" width="0.1524" layer="91"/>
+<label x="-67.31" y="69.85" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="LCD_5" class="0">
@@ -2311,6 +2453,11 @@ Variants with postfix FAB are widened to allow the routing of internal traces</d
 <wire x1="78.74" y1="40.64" x2="87.63" y2="40.64" width="0.1524" layer="91"/>
 <label x="87.63" y="40.64" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="LCD1" gate="G$1" pin="DB4"/>
+<wire x1="-55.88" y1="57.15" x2="-66.04" y2="57.15" width="0.1524" layer="91"/>
+<label x="-67.31" y="57.15" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="LCD_6" class="0">
 <segment>
@@ -2319,6 +2466,11 @@ Variants with postfix FAB are widened to allow the routing of internal traces</d
 <wire x1="76.2" y1="40.64" x2="76.2" y2="38.1" width="0.1524" layer="91"/>
 <wire x1="76.2" y1="38.1" x2="87.63" y2="38.1" width="0.1524" layer="91"/>
 <label x="87.63" y="38.1" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="LCD1" gate="G$1" pin="DB5"/>
+<wire x1="-55.88" y1="54.61" x2="-66.04" y2="54.61" width="0.1524" layer="91"/>
+<label x="-67.31" y="54.61" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="LCD_7" class="0">
@@ -2329,12 +2481,22 @@ Variants with postfix FAB are widened to allow the routing of internal traces</d
 <wire x1="71.12" y1="38.1" x2="72.39" y2="38.1" width="0.1524" layer="91"/>
 <label x="87.63" y="35.56" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="LCD1" gate="G$1" pin="DB6"/>
+<wire x1="-55.88" y1="52.07" x2="-66.04" y2="52.07" width="0.1524" layer="91"/>
+<label x="-67.31" y="52.07" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="LCD_8" class="0">
 <segment>
 <pinref part="328-1" gate="1" pin="PB0(ICP1/CLKO/PCINT0)"/>
 <wire x1="71.12" y1="33.02" x2="87.63" y2="33.02" width="0.1524" layer="91"/>
 <label x="87.63" y="33.02" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="LCD1" gate="G$1" pin="DB7"/>
+<wire x1="-55.88" y1="49.53" x2="-66.04" y2="49.53" width="0.1524" layer="91"/>
+<label x="-67.31" y="49.53" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="ENCODER_A3" class="0">
@@ -2377,6 +2539,62 @@ Variants with postfix FAB are widened to allow the routing of internal traces</d
 <pinref part="328-1" gate="1" pin="PB1(OC1A/PCINT1)"/>
 <wire x1="71.12" y1="30.48" x2="87.63" y2="30.48" width="0.1524" layer="91"/>
 <label x="87.63" y="30.48" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="N$15" class="0">
+<segment>
+<wire x1="-29.21" y1="114.3" x2="-87.63" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="-87.63" y1="114.3" x2="-87.63" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="-87.63" y1="106.68" x2="-87.63" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="-87.63" y1="10.16" x2="-29.21" y2="8.89" width="0.1524" layer="91"/>
+<wire x1="-29.21" y1="8.89" x2="-29.21" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="-29.21" y1="114.3" x2="-29.21" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="-29.21" y1="106.68" x2="-87.63" y2="106.68" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="10K_POTENTIOMETER" class="0">
+<segment>
+<pinref part="LCD1" gate="G$1" pin="VO"/>
+<wire x1="-55.88" y1="77.47" x2="-66.04" y2="77.47" width="0.1524" layer="91"/>
+<label x="-83.82" y="77.47" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="-76.2" y1="25.4" x2="-69.85" y2="25.4" width="0.1524" layer="91"/>
+<label x="-83.82" y="24.13" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="N$22" class="0">
+<segment>
+<pinref part="LCD1" gate="G$1" pin="DB0"/>
+<wire x1="-55.88" y1="67.31" x2="-66.04" y2="67.31" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$23" class="0">
+<segment>
+<pinref part="LCD1" gate="G$1" pin="DB1"/>
+<wire x1="-55.88" y1="64.77" x2="-66.04" y2="64.77" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$24" class="0">
+<segment>
+<pinref part="LCD1" gate="G$1" pin="DB2"/>
+<wire x1="-55.88" y1="62.23" x2="-66.04" y2="62.23" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$25" class="0">
+<segment>
+<pinref part="LCD1" gate="G$1" pin="DB3"/>
+<wire x1="-55.88" y1="59.69" x2="-66.04" y2="59.69" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$17" class="0">
+<segment>
+<wire x1="-63.5" y1="27.94" x2="-55.88" y2="27.94" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$18" class="0">
+<segment>
+<wire x1="-63.5" y1="22.86" x2="-55.88" y2="22.86" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
